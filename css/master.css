@@ -1,0 +1,252 @@
+:root{
+    --color-white: #fff;
+    font-size: large;
+    overflow: hidden;
+}
+
+body {
+    font-family: sans-serif!important;
+    font-weight: 300;
+}
+
+
+/* z-index */
+.z-index-1000{
+    z-index: 1000;
+}
+.z-index-100{
+    z-index: 100;
+}
+
+
+/* text */
+.text-black{
+    color: black;
+}
+
+
+/* fontsize */
+.rem2p5{
+    font-size: 2.5rem;
+}
+
+
+/* border */
+.border-bottom-double-bl{
+    text-decoration:underline double black;
+}
+
+
+/* height */
+.vh-10{
+    height: 10vh;
+}
+.vh-90{
+    height: 90vh;
+}
+
+.h-95{
+    height: 95%;
+}
+
+.h-90{
+    height: 90%;
+}
+
+.h-85{
+    height: 85%;
+}
+
+.h-60{
+    height: 60%;
+}
+
+.h-40{
+    height: 40%;
+}
+
+
+/* width */
+.w-45{
+    width: 45%;
+}
+
+
+/* back-ground-color */
+.bg-wrapper1{
+    /* receive画面 */
+    background-image: 
+    linear-gradient(
+      to bottom right in hsl, 
+      oklch(70% .5 340) 0%, oklch(90% .3 200) 100%
+    );
+}
+
+.bg-wrapper2{
+    /* ranking画面*/
+    background-image: 
+    conic-gradient(
+      from 163deg at 50% 47% in oklch longer hue, 
+      oklch(70% .3 0) 0%, oklch(70% .3 0) 100%
+    );
+}
+
+.bg-wrapper3{
+    background-image: 
+    linear-gradient(
+      151deg in oklab, 
+      oklch(55% 0.45 28) 0%, 24%, oklch(100% .4 95) 85% 0%
+    );
+}
+
+.bg-wrapper4{
+    /* home画面 */
+    background-image: 
+    linear-gradient(
+        145deg in oklab, 
+        oklch(69% 0.43 84) 4% 4%, oklch(80% 0.50 284) 96% 96%
+    );
+}
+
+.bg-opasity-white{
+    background-color: rgb(255, 255, 255, 0.4);
+}
+
+.bg-opasity-white2{
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.bg-black{
+    background-color: black;
+}
+
+
+/* 背景バブル */
+.bg-bubbles{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+.box{
+    position: absolute;
+    bottom: -160px;
+
+
+    list-style: none;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-white);
+    opacity: 0.3;
+}
+
+.fadeUp{
+    animation-name:come-up-anim;
+    animation-duration:14s;
+    animation-fill-mode:forwards;
+    animation-iteration-count: infinite;
+}
+
+.child1{
+    left: 10%;
+}
+    
+.child2{
+    left: 20%;
+      
+    width: 80px;
+    height: 80px;
+      
+    animation-delay: 2s;
+    animation-duration: 17s;
+}
+
+.child3{
+    left: 25%;
+    animation-delay: 4s;
+}
+
+.child4{
+    left: 40%;
+    width: 60px;
+    height: 60px;
+      
+    animation-duration: 22s;
+      
+    background-color: var(--color-white);
+    opacity: 0.25;
+}
+
+.child5{
+    left: 70%;
+}
+
+.child6{
+    left: 80%;
+    width: 120px;
+    height: 120px;
+      
+    animation-delay: 3s;
+    background-color: var(--color-white);
+    opacity: 0.2;
+}
+
+.child7{
+    left: 32%;
+    width: 160px;
+    height: 160px;
+      
+    animation-delay: 7s;
+}
+
+.child8{
+    left: 55%;
+    width: 20px;
+    height: 20px;
+      
+    animation-delay: 15s;
+    animation-duration: 40s;
+}
+
+.child9{
+    left: 25%;
+    width: 10px;
+    height: 10px;
+    
+    animation-delay: 2s;
+    animation-duration: 40s;
+    background-color: var(--color-white);
+    opacity: 0.3;
+}
+
+.child10{
+    left: 90%;
+    width: 160px;
+    height: 160px;
+      
+    animation-delay: 11s;
+}
+
+
+/* その他 */
+.opasity0{
+    opacity: 0;
+}
+
+
+/* アニメーション */
+
+/* main */
+/* 背景のブロックを上に動かすアニメーション */
+@keyframes come-up-anim {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-150vh) rotate(250deg);
+    }
+  }

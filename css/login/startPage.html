@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log-in-page</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--css-->
+    <link rel="stylesheet" href="../css/start.css">
+    <link rel="stylesheet" href="../css/master.css">
+</head>
+
+<body>
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light vh-10 z-index-1000">
+        <a class="navbar-brand" href="#">TaskRewardsManager</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-taeget="#navbarNavAltMarkup" aria-expand="false" aria-controls="navbarNavAltMarkup">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link" href="#">Help</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+            </div>
+            <div>
+                <button class="btn btn-primary" onclick="location.href=`#`">Log in</button>
+                <button class="btn btn-outline-primary" onclick="location.href=`#`">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 背景 -->
+    <div class="bg-wrapper4 vh-90 d-flex flex-column justify-content-center align-items-center overflow-hidden">
+        <!-- container -->
+        <div class="container receiveOrGive col-10 flex-column pb-4 z-index-100" id="start-container">
+            <h1 class="text-left text-white py-2">Welcome</h1>
+            <div class="d-flex justify-content-center py-3">
+                <button type="button" id="btnReceive" class="startPageBtn text-dark" onclick="appearReceiveForm()">Receive</button>
+                <button type="button" id="btnGive" class="startPageBtn text-dark" onclick="appearGiveForm()">Order</button>
+            </div>
+        </div>
+
+        <!-- ログイン画面：受注 -->
+        <div class="col-4 position-absolute pb-5 d-none z-index-100" id="Receive-login-screen">
+            <h1 class="py-1 text-white">Receive:</h1>
+            <form method="post" id="formReceive">
+                <!-- username -->
+                <div class="form-group mb-4">
+                    <input class="form-control form-login" type="text" placeholder="Username" required id="usernameR">
+                </div>
+                <!-- pass -->
+                <div class="form-group mb-4">
+                    <input class="form-control form-login" type="password" placeholder="Password" required id="passwordR">
+                </div>
+                <!-- Gr-ID -->
+                <div class="form-group mb-4">
+                    <input class="form-control form-login" type="text" placeholder="GroupeID" required id="">
+                </div>
+                <!-- submit -->
+                <button class="button-login col-12" type="submit" onclick="location.href=`../receive-screen/receiveUserMenu.html`">Login</button>
+            </form>
+            
+        </div>
+
+        <!-- ログイン画面：発注 -->
+        <div class="col-4 position-absolute pb-5 d-none z-index-100" id="Give-login-screen">
+            <h1 class="py-1 text-white">Order:</h1>
+            <form method="post" id="formReceive">
+                <!-- username -->
+                <div class="form-group mb-4">
+                    <input class="form-control form-login" type="text" placeholder="Username" required id="usernameG">
+                </div>
+                <!-- pass -->
+                <div class="form-group mb-4">
+                    <input class="form-control form-login" type="password" placeholder="Password" required id="passwordG">
+                </div>
+                <!-- Gr-ID -->
+                <div class="form-group mb-4">
+                    <input class="form-control form-login" type="text" placeholder="GroupeID" required id="">
+                </div>
+                <!-- submit -->
+                <button class="button-login col-12" type="submit" onclick="location.href=`../order-screen/order-menu.html`">Login</button>
+            </form>
+        </div>
+
+        <!-- 背景バブル -->
+        <ul class="bg-bubbles">
+            <li class="child1 fadeUp box"></li>
+            <li class="child2 fadeUp box"></li>
+            <li class="child3 fadeUp box"></li>
+            <li class="child4 fadeUp box"></li>
+            <li class="child5 fadeUp box"></li>
+            <li class="child6 fadeUp box"></li>
+            <li class="child7 fadeUp box"></li>
+            <li class="child8 fadeUp box"></li>
+            <li class="child9 fadeUp box"></li>
+            <li class="child10 fadeUp box"></li>
+        </ul>
+
+        
+        
+
+        <!-- jsファイル -->
+        <script src="../JavaScript/script.js"></script>
+    </div>
+</body>
+</html>

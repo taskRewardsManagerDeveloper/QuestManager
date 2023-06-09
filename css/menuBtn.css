@@ -1,0 +1,17 @@
+.menu-btn{
+    background-color: rgb(255, 255, 255, 0.2);
+    border: none;
+}
+
+.menu-btn:hover{
+    background-color: black;
+}
+
+.menu-btn-evaluate{
+    background-color: rgb(0, 0, 255, 0.9);
+    border: none;
+}
+
+.menu-btn-evaluate:hover{
+    background-color: black;
+}

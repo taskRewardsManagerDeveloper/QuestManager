@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>startPage</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--css-->
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/questBoard.css">
+</head>
+
+<body>
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light vh-10 z-index-1000">
+        <a class="navbar-brand" href="#">TaskRewardsManager</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-taeget="#navbarNavAltMarkup" aria-expand="false" aria-controls="navbarNavAltMarkup">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link" href="#">Help</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+            </div>
+            <div>
+                <button class="btn btn-primary" onclick="location.href=`#`">Log in</button>
+                <button class="btn btn-outline-primary" onclick="location.href=`#`">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 背景 -->
+    <div class="bg-wrapper3 vh-90 overflow-hidden">
+       <!-- container -->
+       <div class="container col-11 h-95 z-index-100 my-1">
+            <!-- 見出し -->
+            <h1 class="col-12 px-0 m-2 text-left text-light rem2p5 border-bottom-double-bl">Make Order</h1>
+            <!-- ボードの中身 -->
+            <div class="my-2 h-90 bg-opasity-white d-flex flex-column rounded text-light px-3 py-1">
+                <form method="post" class="h-100">
+                    <div class="h-40">
+                        <!-- タイトル -->
+                        <div class="form-group col-12 mb-1">
+                            <label for="order-title">Title:</label>
+                            <input type="text" id="order-title" class="form-control" placeholder="Ex) fix bug ..." required>
+                        </div>
+                        <div class="d-flex">
+                            <!-- GroupeID -->
+                            <div class="form-group col-4">
+                                <label for="order-GID">Rewards:</label>
+                                <input type="text" id="order-GID" class="form-control" placeholder="Ex) 10000" required>
+                            </div>
+                            <!-- 期限 -->
+                            <div class="form-group col-4">
+                                <label for="order-limit">Limit:</label>
+                                <input type="text" id="order-limit" class="form-control" placeholder="Ex) 2023/ 05/ 20/ 17:00" required>
+                            </div>
+                            <!-- 難易度 -->
+                            <div class="form-group col-4">
+                                <label for="order-dif">Difficulty lebel(1~5):</label>
+                                <input type="text" id="order-dif" class="form-control" placeholder="Ex) 5" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="h-60">
+                        <!-- 説明 -->
+                        <div class="form-group col-12 mb-0 h-75">
+                            <label for="order-disc">Discription:</label>
+                            <textarea id="order-disc" class="col-12 rounded h-75" placeholder="EX) there is a bug, when..."></textarea>
+                        </div>
+                        <!-- 送信 -->
+                        <div class="form-group col-12 d-flex justify-content-end align-items-center h-25">
+                            <!-- dbに登録＆＆完了画面に遷移したい。 -->
+                            <button class="btn btn-info mt-2" type="submit" onclick = "location.href=`#`">confirm ></button>
+                        </div>
+                    </div>
+
+
+                    
+                </form>
+            </div>
+       </div>
+
+       <!-- 背景バブル -->
+       <ul class="bg-bubbles">
+            <li class="child1 fadeUp box"></li>
+            <li class="child2 fadeUp box"></li>
+            <li class="child3 fadeUp box"></li>
+            <li class="child4 fadeUp box"></li>
+            <li class="child5 fadeUp box"></li>
+            <li class="child6 fadeUp box"></li>
+            <li class="child7 fadeUp box"></li>
+            <li class="child8 fadeUp box"></li>
+            <li class="child9 fadeUp box"></li>
+            <li class="child10 fadeUp box"></li>
+       </ul>
+    </div>
+</body>
+</html>

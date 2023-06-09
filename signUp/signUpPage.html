@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sign-up-page</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--css-->
+    <link rel="stylesheet" href="../css/master.css">
+    <link rel="stylesheet" href="../css/menuBtn.css">
+    <link rel="stylesheet" href="../css/start.css">
+</head>
+
+<body>
+    <!--nav-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light vh-10 z-index-1000">
+        <a class="navbar-brand" href="#">TaskRewardsManager</a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-taeget="#navbarNavAltMarkup" aria-expand="false" aria-controls="navbarNavAltMarkup">
+           <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="#">Home</a>
+                <a class="nav-item nav-link" href="#">Pricing</a>
+                <a class="nav-item nav-link" href="#">Help</a>
+                <a class="nav-item nav-link" href="#">Contact</a>
+            </div>
+            <div>
+                <button class="btn btn-primary" onclick="location.href=`#`">Log in</button>
+                <button class="btn btn-outline-primary" onclick="location.href=`#`">Sign up</button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- 背景 -->
+    <div class="position-relative bg-wrapper4 vh-90 d-flex flex-column justify-content-center align-items-center overflow-hidden">
+        <!-- choice R or O -->
+        <!-- container -->
+        <div class="position-absolute container z-index-100" id="registerFirstScreen">
+            <!-- row -->
+            <div class="row d-flex justify-content-center">
+                <!-- col -->
+                <div class="col-8 d-flex flex-column align-items-center justify-content-around">
+                    <button class="btn btn-info menu-btn w-100 m-3 p-2" onclick="appearReceiveRegister()"><h5>Click here, If you want to become a <span class="text-primary">Receive-Member</span>! ←</h5></button>
+                    <button class="btn btn-info menu-btn w-100 m-3 p-2" onclick="appearOrderRegister()"><h5>Click here, If you want to become a <span class="text-danger">Order-Member</span>!</h5></button>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Receive-Member登録フォーム -->
+        <div class="position-absolute container h-100 z-index-100 d-none" id="registerReceiveScreen">
+            <div class="d-flex flex-column h-100 justify-content-center align-items-center">
+                <!-- フォームdiv -->
+                <div class="col-6 bg-light rounded py-2 px-3 d-flex flex-column justify-content-between">
+                    <h3 class="text-left py-1">Receive: </h3>
+                    <form method="post">
+                        <!-- Usrname -->
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Username" required id="">
+                        </div>
+                        <!-- pass -->
+                        <div class="form-group">
+                            <input class="form-control" type="password" placeholder="Password" required id="">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" placeholder="Password-Re" required id="">
+                        </div>
+                        <!-- organization-ID -->
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Organization-ID" required id="">
+                        </div>
+                        <!-- 登録ボタン -->
+                        <div class="d-flex justify-content-around">
+                            <button class="w-45 btn btn-primary"> < back</button>
+                            <button type="submit" onclick="location.href='signUpSuccess.html'" class="w-45 btn btn-info">confirm ></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Order-Member登録フォーム -->
+        <div class="position-absolute container h-100 z-index-100 d-none" id="registerOrderScreen">
+            <div class="d-flex flex-column h-100 justify-content-center align-items-center">
+                <!-- フォームdiv -->
+                <div class="col-6 bg-light rounded py-2 px-3 d-flex flex-column justify-content-between">
+                    <h3 class="text-left py-1">Order: </h3>
+                    <form method="post">
+                        <!-- Usrname -->
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Username" required id="">
+                        </div>
+                        <!-- pass -->
+                        <div class="form-group">
+                            <input class="form-control" type="password" placeholder="Password" required id="">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" type="password" placeholder="Password-Re" required id="">
+                        </div>
+                        <!-- organization-ID -->
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Organization-ID" required id="">
+                        </div>
+                        <!-- 登録ボタン -->
+                        <div class="d-flex justify-content-around">
+                            <button class="w-45 btn btn-primary"> < back</button>
+                            <button type="submit" onclick="location.href='signUpSuccess.html'" class="w-45 btn btn-info">confirm ></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+       <!-- 背景バブル -->
+       <ul class="bg-bubbles">
+            <li class="child1 fadeUp box"></li>
+            <li class="child2 fadeUp box"></li>
+            <li class="child3 fadeUp box"></li>
+            <li class="child4 fadeUp box"></li>
+            <li class="child5 fadeUp box"></li>
+            <li class="child6 fadeUp box"></li>
+            <li class="child7 fadeUp box"></li>
+            <li class="child8 fadeUp box"></li>
+            <li class="child9 fadeUp box"></li>
+            <li class="child10 fadeUp box"></li>
+        </ul>
+    </div>
+
+    <script src="../JavaScript/script.js"></script>
+</body>
+</html>
